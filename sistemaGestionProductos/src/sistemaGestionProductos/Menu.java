@@ -17,7 +17,7 @@ public class Menu {
 			case "1" -> gsProd.agregarProducto();
 			case "2" -> gsProd.listarProductos();
 			case "3" -> gsProd.buscarProducto();
-			case "4" -> System.out.println("opcion 4 elegida");
+			case "4" -> gsProd.eliminarProducto();
 			case "5" -> salirSistema();
 			default -> System.out.println("Opcion invalida");
 			}
