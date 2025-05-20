@@ -37,7 +37,14 @@ public class GestionProductos {
 	}
 	
 	public void eliminarProducto() {
-		
+		int id = ingresarId();
+		Producto producto = buscarProductoById(id);
+		if (producto != null) {
+		    listaProductos.remove(producto);
+		    System.out.println("Producto eliminado.");
+		} else {
+		    System.out.println("Producto no encontrado.");
+		}
 	}
 	
 	private Producto buscarProductoById(int id) {
