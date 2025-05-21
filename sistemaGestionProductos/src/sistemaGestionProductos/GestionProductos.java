@@ -1,6 +1,7 @@
 package sistemaGestionProductos;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,6 +22,7 @@ public class GestionProductos {
 	public void listarProductos() {
 		System.out.println("Listado de productos");
 		System.out.println("--------------------");
+		listaProductos.sort(Comparator.comparingInt(Producto::getId));
 		for(Producto p : listaProductos) {
 			System.out.println(p);
 		}
